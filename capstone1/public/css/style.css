@@ -1,0 +1,639 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+nav {
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    height: 11%;
+    box-sizing: border-box;
+    transition: .3s;
+    padding: 10px 5%;
+    border-bottom: 2px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+nav .menu-icon {
+    margin-top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    display: none;
+
+}
+
+nav.black .menu-icon i {
+    color: white;
+
+}
+
+nav .menu-icon i {
+    font-size: 30px;
+}
+
+nav.black {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    /*	padding: 10px 5%;*/
+}
+
+nav .logo a {
+    line-height: 50px;
+    float: left;
+    font-size: 26px;
+    font-weight: bold;
+    transition: .3s;
+    color: #151515;
+}
+
+nav.black .logo {
+    color: #fff;
+}
+
+nav.black .logo a {
+    color: #fff;
+}
+
+nav ul {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    float: right;
+
+}
+
+nav ul li {
+    border-radius: 5px;
+    padding-right: 20px;
+}
+
+nav ul li a {
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #151515;
+    transition: .3s;
+    padding: 10px 20px;
+
+}
+
+
+nav.black ul li a {
+    color: #fff;
+}
+
+nav ul li a:focus {
+    outline: none;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 17, 0);
+    background: #4e4141;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background:#616161;
+    border-radius: 5px;
+    opacity: unset;
+    color: unset;
+    display: inline;
+}
+
+section.sec1 {
+    width: 100%;
+    height: 100vh;
+    background: url(../hinh/anh2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+section a {
+    cursor: pointer;
+}
+.content {
+    padding: 0 8%;
+}
+
+.content a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*login--------------------------------------------------------------------------------------------*/
+.background {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../hinh/anh.jpeg) no-repeat 50%, 50%;
+    background-size: cover;
+}
+
+.background .box {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    background-color: rgba(0, 0, 0, .7);
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, .3);
+
+}
+
+
+.box .inputbox {
+    padding: 20px 40px 0 40px;
+    position: relative;
+}
+
+.box .inputbox input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+.box .inputbox label {
+    color: white;
+    position: absolute;
+    top: 40px;
+    pointer-events: none;
+    transition: .4s;
+
+}
+
+.box .inputbox input:focus~label,
+.box .inputbox input:valid~label {
+    top: -3px;
+    color: rgb(49, 16, 150);
+    font-size: 18px;
+
+}
+
+.box .btnlogin {
+    color: white;
+    background: rgb(49, 16, 150);
+    margin: 30px 50px;
+    padding: 10px 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+}
+
+.box .signup {
+    float: right;
+}
+
+.checkbox {
+    height: 15px;
+    margin: 15px 0 0 40px;
+    color: #fff;
+}
+.box .fb-icon {
+    width:200px; 
+    height: 30px; 
+    margin-left: 40px;
+
+}
+.fb-icon .login-btn {   
+    width: 100%;
+    height: 100%;
+    display:inline-block;
+    background-color: transparent;
+
+}
+.login-btn span {
+    width: 100%;
+    height: 100%;
+    background-image: url(../hinh/fblink.JPG);
+    background-size: cover;
+    
+
+}
+
+
+
+
+
+
+
+
+
+/* waitingpage css ----------------------------------------------------------------------------*/
+
+#page-content {
+    width: 100%;
+    height: 100vh;
+}
+
+#main-container {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+#main-container .top {
+    flex-basis: 15%;
+    border-top: 1px solid black;
+   /*  border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
+.top h2 {
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 30px;
+}
+#main-container .mid-content {
+    display: flex;
+    width: 100%;
+    flex-basis: 65%;
+    /* border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #616161;
+}
+.mid-content .time-counting {
+    flex-basis: 50%;
+}
+#btn-play {
+    margin: 30px 0 0 50px;
+    font-size: 30px;
+    padding: 0 15px 0 15px;
+    border-radius: 4px;
+}
+#waiting {
+    margin: 30px;
+}
+.mid-content .game-rule {
+    flex-basis : 50%;
+     
+}
+.game-rule p {
+    margin: auto;
+    font-size: 22px;
+}
+.game-rule .rule-box {
+    font-size: 18px;
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #f1f1f9;
+    border-radius: 7px;
+    resize: vertical;
+    box-sizing: border-box;
+
+
+
+}
+#rule-box {
+     box-sizing: border-box;
+    resize: both;
+}
+#page-content #bottom {
+    flex-basis: 20%;
+   /*  border-bottom:1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
+
+/* word explain chat ----------------------------------------------------------------------------------- */
+.chat-container {
+    width: 100%;
+    height: 110vh;
+}
+.chat-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+}
+.chat-content .top {
+    flex-basis: 15%;
+    border-top: 1px solid black;
+   /*  border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
+.chat-content .mid-chat {
+    display: flex;
+    width: 100%;
+    flex-basis: 27rem;
+    background-color: #616161;
+
+}
+
+.mid-chat .team {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+    .team .header-team {
+        flex-basis: 20%;
+        display: flex;
+    }
+        .header-team .team-name {
+        flex-basis: 50%;
+        border: 1px solid black;
+        }
+        .header-team .point {
+        flex-basis: 50%;
+        border: 1px solid black;
+        }
+    .team .member {
+    height: 40%;
+    border: 1px solid black;
+    }
+    .member .rule {
+        width: 100%;
+        height: 50%;
+        border: 1px solid black;
+    }
+    .member .member-name {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        border: 1px solid black;
+    }
+    .member-name .icon {
+        flex-basis: 25%;
+        border: 1px solid black;
+    }
+    .member-name .name {
+        flex-basis: 75%;
+        border: 1px solid black;
+    }
+
+
+        
+
+
+.mid-chat .chat {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f9;
+}
+.chat #chat-box {
+    max-height: 500px;
+     flex-basis: 80%;
+     overflow-y: auto;
+    padding-top: 1.4rem;
+}
+.chat #chat-form {
+    flex-basis: 20%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
+    position: relative;
+}
+#chat-form textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    height: 100%;
+    width: 80%;
+    line-height: 1.3rem;
+    background-color: transparent;
+    flex-grow: 1;
+}
+#chat-form input {
+    border: none;
+    outline: none;
+    resize: none;
+    height: 100%;
+    width: 80%;
+    line-height: 1.3rem;
+    background-color: transparent;
+    flex-grow: 1;
+}
+#chat-form button {
+    border: none;
+    width: 19%;
+    height: 100%;
+    background-color: transparent;
+    color: dodgerblue;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 200ms ease;
+    position: absolute;
+    border-radius: 3px;
+}
+/* ------------------------------------ */
+.fr, .me { 
+    display: flex; 
+    align-items: center; 
+    position: relative;
+}
+
+/* .me { justify-content: flex-end; } */
+
+.fr .chat-content, .me .chat-content {
+    margin: .7rem .8rem;
+    padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    width: auto;
+}
+
+.fr .chat-content { 
+    background-color: #e3ecec;
+    font-size: 14px;
+ }
+
+.fr span, .me span {
+    font-size: 13px;
+    position: absolute;
+    top: -2px;
+    font-weight: 300;
+    text-shadow: .2px .2px .4px rgba(0,0,0, .16);
+}
+
+.fr span { left: 20px; }
+.me span { right: 20px; }
+
+.me .chat-content { 
+    background-color: dodgerblue; 
+    color: white; 
+    font-size: 12px;
+}
+
+.fr .chat-content:before, .me .chat-content:before {
+    content: '';  
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.fr .chat-content:before {
+    left: -1px;
+    bottom: -9px;
+    transform: rotateZ(8.5deg);
+    border-top-color: #e3ecec;
+    border-left-color: #e3ecec;
+}
+
+.me .chat-content:before {
+    right: 0px;
+    bottom: -9px;
+    transform: rotateZ(-8.5deg);
+    border-top-color: dodgerblue;
+    border-right-color: dodgerblue;
+}
+/* -------------------------------------- */
+#chat-form button:hover {
+    background-color: #616161;
+}
+.chat-content .key-word {
+    flex-basis: 10rem;
+    border-bottom: 1px solid black;
+   /*  border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
+.chat-content .bot-chat {
+    flex-basis: 10rem;
+    border-bottom: 1px solid black;
+   /*  border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
+
+@media(max-width: 992px) {
+
+
+    nav {
+        width: 100%;
+        height: 9%;
+
+    }
+
+    nav .logo {
+        font-size: 35px;
+        line-height: 70px;
+    }
+    nav .logo a {
+        line-height: 30px;
+    }
+    
+
+    nav ul {
+        left: 0;
+        position: absolute;
+        background-color: transparent;
+        top: 100%;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0;
+        transform-origin: 50% 0;
+        transform: scaleY(0);
+        transition: .3s;
+    }
+
+    nav.black ul {
+        background-color: inherit;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+
+    nav ul.showing {
+        transform: scaleY(1);
+        transition: .3s;
+        background-color: black;
+        z-index: 999;
+    }
+    nav ul.showing li a {
+        color: rgb(243, 233, 233);
+    }
+    nav .menu-icon {
+        display: inline;
+        cursor: pointer;
+        top:0px;
+    }
+    /* waitingpage */
+    #main-container {
+        width: 100%;
+        height: auto;
+        background-color: 
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    #main-container .top {
+        width: 100%;
+        flex-basis: 100px;
+    }
+    .top h2 {
+        font-size: 20px;
+    }
+    #main-container .mid-content {
+        flex-direction: column;
+        flex-basis: 650px;
+    }
+    .mid-content .time-counting {
+        flex-basis: 200px  ;
+        border-bottom:  1px solid black;
+
+    }
+    .mid-content .game-rule {
+        flex-basis: 450px  ;
+    }
+    #main-container .bottom {
+        flex-basis: 200px;
+    }
+
+
+}
+@media all and (max-width: 480px) {
+    nav {
+        width: 100%;
+        height: 10%;
+        position: relative;
+    }
+    nav .logo a{
+        line-height: 30px;
+        top: 0px;
+
+    }
+    nav .menu-icon {
+        top: 0px;
+    }
+    .background .box {
+        position: absolute;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+ 
+}

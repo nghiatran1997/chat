@@ -1,0 +1,55 @@
+doctype html
+head
+  title Words Explain
+  include include/script.pug 
+.chat-container
+  include include/nav.pug
+  .chat-content
+    .top
+      h2 WORD EXPLAIN
+    .mid-chat
+      .teama.team
+        .header-team
+          .team-name TEAM A
+          .point Point:
+        .member
+          .member-name
+            .icon
+            .name
+          .rule
+        .member
+          .member-name
+            .icon
+            .name
+          .rule
+      .chat
+        #chat-box.middle-content
+          .force-overflow
+        #chat-form
+          textarea#content-input(autofocus='', placeholder='Write here...', spellcheck='false')
+          // <input type="text" id="content-input">
+          button#chat-btn(type='button') Send
+      .teamb.team
+        .header-team
+          .team-name TEAM B
+          .point Point:
+        .member
+          .member-name
+            .icon
+            .name
+          .rule
+        .member
+          .member-name
+            .icon
+            .name
+          .rule
+    .key-word
+    .bot-chat
+script(type='text/javascript').
+  $(document).ready(function() {
+  $(".menu-icon").on("click", function() {
+  $("nav ul").toggleClass("showing");
+  });
+  $('.middle-content').scrollTop($('.middle-content')[0].scrollHeight);
+  });
+script(type='text/javascript', src='javascript/bundle.js', async='')

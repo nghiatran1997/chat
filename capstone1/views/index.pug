@@ -1,0 +1,36 @@
+doctype html
+head
+  title ENGLISH FOR YOU
+  include include/script.pug
+  script(src='socket.io/socket.io.js')
+  script(src='/assets/javascript/clientSocket.js')
+.top-content
+  section.sec1
+    include include/nav.pug
+  section.content.slide-1
+    a(href='waitingpage.html') Words Explain
+    p
+      | Co-op with orther member in group to guess and explain words
+  section.content.slide-2
+    a(href='') Chat
+    p
+      | Chat with foreigner to gain communication skill
+  section.content.slide-3
+    a(href='') Listen
+    p
+      | With many type music, video will help your Listening improve.
+script.
+  $(document).ready(function() {
+  $(".menu-icon").on("click", function() {
+  $("nav ul").toggleClass("showing");
+  });
+  });
+  // Scrolling Effect
+  $(window).on("scroll", function() {
+  if ($(window).scrollTop()) {
+  $('nav').addClass('black');
+  } else {
+  $('nav').removeClass('black');
+  }
+  });
+// <script type="text/javascript" src="javascript/bundle.js" async></script>

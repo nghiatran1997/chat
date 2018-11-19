@@ -1,0 +1,73 @@
+head
+  title Words Explain
+  include include/script.pug
+#page-content
+  include include/nav.pug
+  #main-container
+    .top
+      h2 WORD EXPLAIN
+    .mid-content
+      .time-counting
+        button#btn-play(type='button', current-value='PLAY') PLAY
+        label#minutes 00
+        | :
+        label#seconds 00
+        #waiting
+      .game-rule
+        p Game Rule
+        .rule-box
+          | Hai &dstrok;&#x1ED9;i c&#x1EE7;a hai ng&#x1B0;&#x1EDD;i ch&#x1A1;i (t&#x1ED5;ng c&#x1ED9;ng b&#x1ED1;n ng&#x1B0;&#x1EDD;i ch&#x1A1;i) thay phi&ecirc;n nhau c&#x1ED1; g&#x1EAF;ng gi&#x1EA3;i th&iacute;ch v&agrave; &dstrok;o&aacute;n b&#x1EB1;ng c&aacute;ch g&otilde; &dstrok;&#x1EC3; nh&#x1EAD;p n&#x1ED9;i dung b&#x1EB1;ng ti&#x1EBF;ng anh, l&agrave;m sao &dstrok;&#x1EC3; &dstrok;&#x1EA1;t nhi&#x1EC1;u t&#x1EEB; h&#x1A1;n &dstrok;&#x1ED9;i &dstrok;&#x1ED1;i th&#x1EE7; trong khi b&#x1ECB; t&iacute;nh gi&#x1EDD;. Ng&#x1B0;&#x1EDD;i ch&#x1A1;i gi&#x1EA3;i th&iacute;ch tr&ecirc;n c&ugrave;ng m&#x1ED9;t nh&oacute;m c&#x1ED1; g&#x1EAF;ng gi&uacute;p &dstrok;&#x1ED3;ng &dstrok;&#x1ED9;i c&#x1EE7;a m&igrave;nh &dstrok;o&aacute;n m&#x1ED9;t t&#x1EEB; &dstrok;&#x1B0;&#x1EE3;c ch&#x1ECD;n t&#x1EEB; danh s&aacute;ch &dstrok;&#x1B0;&#x1EE3;c cung c&#x1EA5;p ng&#x1EAB;u nhi&ecirc;n. Nh&oacute;m kh&ocirc;ng gi&#x1EA3;i th&iacute;ch c&utilde;ng c&oacute; th&#x1EC3; &dstrok;o&aacute;n t&#x1EEB; m&agrave; ng&#x1B0;&#x1EDD;i ch&#x1A1;i gi&#x1EA3;i th&iacute;ch &dstrok;ang g&#x1EE3;i &yacute;, nh&#x1B0;ng s&#x1EBD; &dstrok;&#x1B0;&#x1EE3;c th&#x1B0;&#x1EDF;ng &iacute;t &dstrok;i&#x1EC3;m h&#x1A1;n &dstrok;&#x1ED3;ng &dstrok;&#x1ED9;i c&#x1EE7;a ng&#x1B0;&#x1EDD;i ch&#x1A1;i gi&#x1EA3;i th&iacute;ch. M&#x1ED7;i ng&#x1B0;&#x1EDD;i ch&#x1A1;i &dstrok;&#x1B0;&#x1EE3;c m&#x1ED9;t l&#x1B0;&#x1EE3;t &dstrok;&#x1EC3; gi&#x1EA3;i th&iacute;ch v&agrave; &dstrok;o&aacute;n. &Dstrok;&#x1ED1;i v&#x1EDB;i m&#x1ED7;i t&#x1EEB; &dstrok;&#x1B0;&#x1EE3;c gi&#x1EA3;i th&iacute;ch ch&iacute;nh x&aacute;c v&agrave; &dstrok;o&aacute;n, nh&oacute;m c&#x1EE7;a b&#x1EA1;n &dstrok;&#x1B0;&#x1EE3;c th&#x1B0;&#x1EDF;ng 50, 75 ho&#x1EB7;c 100 &dstrok;i&#x1EC3;m, t&ugrave;y thu&#x1ED9;c v&agrave;o t&#x1EEB; &dstrok;&#x1B0;&#x1EE3;c ch&#x1ECD;n.
+    #bottom
+      p About us:
+script(type='text/javascript').
+  // Menu-toggle button
+  $(document).ready(function() {
+  $(".menu-icon").on("click", function() {
+  $("nav ul").toggleClass("showing");
+  });
+  });
+  // ----------------------------------------------------
+  var minutesLabel = document.getElementById("minutes");
+  var secondsLabel = document.getElementById("seconds");
+  var totalSeconds = 0;
+  function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+  }
+  function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+  return "0" + valString;
+  } else {
+  return valString;
+  }
+  }
+  // var timerVar = setInterval(countTimer, 1000);
+  // var totalSeconds = 0;
+  // function countTimer() {
+  //     ++totalSeconds;
+  //     var minutes = Math.floor(totalSeconds / 60);
+  //     var seconds = totalSeconds - (minute * 60);
+  //     document.getElementById("minutes").innerHTML = minutes;
+  //     document.getElementById("seconds").innerHTML = seconds;
+  // }
+  // ----------------------------------------------------
+  var waitingContent = document.getElementById('waiting');
+  var btnPlay = document.getElementById('btn-play');
+  btnPlay.addEventListener('click', function() {
+  var content = 'CANCEL';
+  var currentValue = btnPlay.getAttribute('current-value');
+  if (currentValue === 'PLAY') {
+  var number = setInterval(setTime, 1000);
+  btnPlay.setAttribute('current-value', 'CANCEL');
+  btnPlay.innerText = content;
+  waitingContent.innerText = 'Waiting orther player! ';
+  } else {
+  btnPlay.innerText = 'PLAY';
+  btnPlay.setAttribute('current-value', 'PLAY');
+  waitingContent.innerHTML = '';
+  clearInterval(number);
+  }
+  });
+// <script type="text/javascript" src="javascript/bundle.js" async></script>
